@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap');
+@import "_vars";
+@import "_mixins";
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: $font-family;
+}
+body{
+    background-color: $white;
+}
+.container{
+    max-width: 94rem;
+    margin: 0 auto;
+}
+@import "blocks/_hero.scss";
