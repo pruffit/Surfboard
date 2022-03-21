@@ -1,0 +1,25 @@
+.features{
+    display: flex;
+    list-style: none;
+    &__item{
+        display: flex;
+        align-items: center;
+        .feature{
+            &__icon{
+                width: 3.5rem;
+                height: 3.5rem;
+                margin-right: 1.4rem;
+            }
+            &__text{
+                font-weight: 700;
+                font-size: 1.6rem;
+                line-height: 1.1;
+                color: $white;
+                max-width: 9rem;
+            }
+        }
+        &:not(:last-child){
+            margin-right: 3.3rem;
+        }
+    }
+}

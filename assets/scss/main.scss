@@ -27,4 +27,7 @@ body{
     max-width: 94rem;
     margin: 0 auto;
 }
+@import "blocks/_btn.scss";
+@import "blocks/_header.scss";
 @import "blocks/_hero.scss";
+@import "blocks/_features.scss";
