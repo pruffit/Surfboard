@@ -1,0 +1,51 @@
+.radio{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    &:not(:last-child){
+        margin-right: 2rem;
+    }
+    &--checkbox{
+        .radio__visible{
+            border-radius: 0;
+            &::before{
+                background: url(../images/lead-form/1.svg) center center no-repeat;
+            }
+        }
+    }
+    input{
+        display: none;
+        &:checked ~ .radio__visible{
+            &::before{
+                display: block;
+            }
+        }
+    }
+    &__visible{
+        width: 2.6rem;
+        height: 2.6rem;
+        position: relative;
+        border-radius: 50%;
+        background-color: $white;
+        margin-right: 1rem;
+        &::before{
+            content: "";
+            width: 1.3rem;
+            height: 1.3rem;
+            background-color: $yellow;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+    }
+    &__title{
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        color: $white;
+    }
+}
