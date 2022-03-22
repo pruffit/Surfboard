@@ -12,9 +12,12 @@ h3,
 h4,
 h5,
 h6,
+ul,
+ol,
 p {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 html {
@@ -50,6 +53,30 @@ body {
 }
 .btn--theme--yellow:hover {
   background-color: #FFD517;
+}
+
+.section {
+  height: 100vh;
+  min-height: 65rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.section__title {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 1.2;
+  color: #292929;
+  margin-bottom: 5rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .header {
@@ -171,4 +198,81 @@ body {
 }
 .features__item:not(:last-child) {
   margin-right: 3.3rem;
+}
+
+.headline {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.headline__title {
+  margin-bottom: 1.7rem;
+}
+.headline__subtitle {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: #666666;
+  padding: 0 27%;
+}
+
+.benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.benefits__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 3%;
+  position: relative;
+}
+.benefits__item:first-child {
+  padding-left: 0;
+}
+.benefits__item:last-child {
+  padding-right: 0;
+}
+.benefits__item:not(:last-child)::before {
+  position: absolute;
+  content: url(../images/why/4.svg);
+  top: 44px;
+  right: 0;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+.benefits .benefit {
+  text-align: center;
+}
+.benefits .benefit__image {
+  display: inline-block;
+  width: 12.8rem;
+  height: 12.8rem;
+  position: relative;
+  background-color: #F2F5F4;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.benefits .benefit__image img {
+  width: 6.8rem;
+  height: 6.8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.benefits .benefit__title {
+  font-weight: 700;
+  font-size: 2.7rem;
+  line-height: 1.2;
+  color: #292929;
+  margin-bottom: 2rem;
+}
+.benefits .benefit__desk {
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: #666666;
 }

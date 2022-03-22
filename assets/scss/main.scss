@@ -12,9 +12,12 @@ h3,
 h4,
 h5,
 h6,
+ul,
+ol,
 p{
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 html{
     font-size: 62.5%;
@@ -28,6 +31,9 @@ body{
     margin: 0 auto;
 }
 @import "blocks/_btn.scss";
+@import "blocks/_section.scss";
 @import "blocks/_header.scss";
 @import "blocks/_hero.scss";
 @import "blocks/_features.scss";
+@import "blocks/_headline.scss";
+@import "blocks/_benefits.scss";
