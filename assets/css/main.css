@@ -498,3 +498,37 @@ body {
   line-height: 1.2;
   color: #fff;
 }
+
+.fixed-menu {
+  position: fixed;
+  top: 20%;
+  right: 3%;
+  z-index: 100;
+}
+.fixed-menu__item.active .fixed-menu__link {
+  border: 1px solid #fff;
+}
+.fixed-menu__item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.fixed-menu__link {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: block;
+  position: relative;
+}
+.fixed-menu__link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
