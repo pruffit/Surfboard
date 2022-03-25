@@ -4,8 +4,11 @@
     }
     &__item{
         flex: 1;
-        padding: 0 3%;
+        padding: 0 1%;
         position: relative;
+        @include _Desktop{
+            padding: 0 3%;
+        }
         &:first-child{
             padding-left: 0;
         }
@@ -16,9 +19,13 @@
             &::before{
                 position: absolute;
                 content: url(../images/why/4.svg);
-                top: 44px;
+                top: rem(44px);
                 right: 0;
                 transform: translateX(50%);
+                display: none;
+                @include _Desktop{
+                    display: block;
+                }
             }
         }
     }
@@ -26,16 +33,16 @@
         text-align: center;
         &__image{
             display: inline-block;
-            width: 128px;
-            height: 128px;
+            width: rem(128px);
+            height: rem(128px);
             position: relative;
             background-color:  #F2F5F4;
             border-radius: 50%;
             overflow: hidden;
-            margin-bottom: 20px;
+            margin-bottom: rem(20px);
             img{
-                width: 68px;
-                height: 68px;
+                width: rem(68px);
+                height: rem(68px);
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -44,14 +51,17 @@
         }
         &__title{
             font-weight: 700;
-            font-size: 27px;
+            font-size: rem(27px);
             line-height: 1.2;
             color: $font-color;
-            margin-bottom: 20px;
+            margin-bottom: rem(7px);
+            @include _Desktop{
+                margin-bottom: rem(20px);
+            }
         }
         &__desk{
             font-weight: 300;
-            font-size: 18px;
+            font-size: rem(18px);
             line-height: 1.2;
             color: $gray;
         }

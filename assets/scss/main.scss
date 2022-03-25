@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap');
 @import "_vars";
 @import "_mixins";
+@import "_media";
 *,
 *::after,
 *::before{
@@ -21,9 +22,16 @@ p{
 }
 html{
     font-family: $font-family;
+    font-size: $baseFontSize;
 }
 body{
     background-color: $white;
+}
+.wrapper{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
 }
 @import "blocks/_container.scss";
 @import "blocks/_btn.scss";

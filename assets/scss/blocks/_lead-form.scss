@@ -10,47 +10,47 @@
     &__col{
         flex: 1;
         &:not(:last-child){
-            margin-right: 20px;
+            margin-right: rem(20px);
         }
     }
     &__row{
         display: flex;
         &:not(:last-child){
-            margin-bottom: 12px;
+            margin-bottom: rem(12px);
         }
     }
     &__block{
         flex: 1;
         &:not(:last-child){
-            margin-right: 20px;
+            margin-right: rem(20px);
         }
     }
     &__input{
         width: 100%;
-        border: 3px solid transparent;
-        padding: 18px 12px;
+        border: rem(3px) solid transparent;
+        padding: rem(18px) rem(12px);
         font-weight: 400;
-        font-size: 18px;
+        font-size: rem(18px);
         line-height: 1.2;
         color: $font-color;
         &:focus{
-            border: 3px solid $yellow;
+            border: rem(3px) solid $yellow;
             outline: none;
         }
         &--textarea{
-            height: 152px;
+            height: rem(152px);
             resize: none;
         }
     }
     &__controls{
         display: flex;
         &:not(:last-child){
-            margin-bottom: 20px;
+            margin-bottom: rem(20px);
         }
     }
     &__title{
         font-weight: 400;
-        font-size: 18px;
+        font-size: rem(18px);
         line-height: 1.2;
         color: $white;
     }

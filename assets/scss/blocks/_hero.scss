@@ -1,26 +1,60 @@
 .hero{
-    background: url(../images/hero/bg.png) center center no-repeat;
+    margin-top: rem(90px);
+    background: url(../images/hero/bg.png) right center no-repeat;
     background-size: cover;
     background-color: #335487;
-    height: 100vh;
-    min-height: 650px;
-    padding: 24px 0 70px;
+    height: 90vh;
+    min-height: rem(650px);
+    padding: rem(24px) 0 rem(70px);
+    @include _Desktop{
+        height: 100vh;
+        margin-top: 0;
+        background: url(../images/hero/bg.png) center center no-repeat;
+        background-size: cover;
+    }
     &__title{
-        width: 46%;
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        @include _Desktop{
+            width: 46%;
+            flex: initial;
+            display: initial;
+            flex-direction: initial;
+            align-items: initial;
+            justify-content: initial;
+            text-align: initial;
+        }
     }
     &__main-title{
         text-transform: uppercase;
         font-weight: 700;
-        font-size: 48px;
+        font-size: rem(48px);
         line-height: 1.2;
         color: $white;
-        margin-bottom: 17px;
+        margin-bottom: rem(9px);
+        @include _Desktop{
+            margin-bottom: rem(17px);
+        }
     }
     &__title-desc{
         font-weight: 400;
-        font-size: 21px;
+        font-size: rem(21px);
         line-height: 1.2;
         color: $white;
-        margin-bottom: 39px;
+        margin-bottom: rem(44px);
+        @include _Desktop{
+            margin-bottom: rem(39px);
+        }
+    }
+    &__icons{
+        display: none;
+        @include _Desktop{
+            display: block;
+        }
     }
 }

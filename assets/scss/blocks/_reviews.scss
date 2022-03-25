@@ -1,15 +1,15 @@
 .reviews{
     &__display{
         background-color: #F8FAF9;
-        padding: 42px;
-        margin-bottom: 15px;
+        padding: rem(42px);
+        margin-bottom: rem(15px);
         &-inner{
             display: flex;
         }
     }
     &__avatar{
-        width: 254px;
-        height: 264px;
+        width: rem(254px);
+        height: rem(264px);
         img{
             object-fit: cover;
             width: 100%;
@@ -18,27 +18,27 @@
     }
     &__content{
         flex: 1;
-        margin-left: 40px;
+        margin-left: rem(40px);
     }
     &__title{
         font-weight: 700;
-        font-size: 27px;
+        font-size: rem(27px);
         line-height: 1.2;
         color: $font-color;
-        margin-bottom: 14px;
+        margin-bottom: rem(14px);
     }
     &__text{
         p{
             font-weight: 400;
-            font-size: 18px;
+            font-size: rem(18px);
             line-height: 1.2;
             color: $gray;   
         }
-        margin-bottom: 25px;
+        margin-bottom: rem(25px);
     }   
     &__author{
         font-weight: 500;
-        font-size: 18px;
+        font-size: rem(18px);
         line-height: 1.5;
         color: $font-color;
     }

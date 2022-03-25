@@ -1,6 +1,11 @@
 .container{
-    max-width: 940px;
+    max-width: calc($container + 60px);
     margin: 0 auto;
+    padding: 0 rem(30px);
+    @include _Desktop{
+        max-width: $container;
+        padding: 0;
+    }
     &--hero{
         display: flex;
         flex-direction: column;

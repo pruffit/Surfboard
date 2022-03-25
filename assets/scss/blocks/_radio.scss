@@ -4,7 +4,7 @@
     cursor: pointer;
     user-select: none;
     &:not(:last-child){
-        margin-right: 20px;
+        margin-right: rem(20px);
     }
     &--checkbox{
         .radio__visible{
@@ -23,16 +23,16 @@
         }
     }
     &__visible{
-        width: 26px;
-        height: 26px;
+        width: rem(26px);
+        height: rem(26px);
         position: relative;
         border-radius: 50%;
         background-color: $white;
-        margin-right: 10px;
+        margin-right: rem(10px);
         &::before{
             content: "";
-            width: 13px;
-            height: 13px;
+            width: rem(13px);
+            height: rem(13px);
             background-color: $yellow;
             border-radius: 50%;
             position: absolute;
@@ -44,7 +44,7 @@
     }
     &__title{
         font-weight: 400;
-        font-size: 18px;
+        font-size: rem(18px);
         line-height: 1.2;
         color: $white;
     }

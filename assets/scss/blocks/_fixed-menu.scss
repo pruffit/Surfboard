@@ -3,29 +3,33 @@
     top: 20%;
     right: 3%;
     z-index: $z-fixed-menu;
+    display: none;  
+    @include _Desktop{
+        display: block;
+    }
     &__item{
         &.active{
             .fixed-menu__link{
-                border: 1px solid $white;
+                border: rem(1px) solid $white;
             }
         }
         &:not(:last-child){
-            margin-bottom: 5px;
+            margin-bottom: rem(5px);
         }
     }
     &__link{
-        width: 18px;
-        height: 18px;
+        width: rem(18px);
+        height: rem(18px);
         border-radius: 50%;
-        border: 1px solid transparent;
+        border: rem(1px) solid transparent;
         display: block;
         position: relative;
         &::before{
             content: "";
             position: absolute;
             display: block;
-            width: 8px;
-            height: 8px;
+            width: rem(8px);
+            height: rem(8px);
             border-radius: 50%;
             background-color: $white;
             top: 50%;
