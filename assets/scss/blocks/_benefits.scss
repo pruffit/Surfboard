@@ -1,5 +1,7 @@
 .benefits{
-    display: flex;
+    &__content{
+        display: flex;
+    }
     &__item{
         flex: 1;
         padding: 0 3%;
@@ -24,16 +26,16 @@
         text-align: center;
         &__image{
             display: inline-block;
-            width: 12.8rem;
-            height: 12.8rem;
+            width: 128px;
+            height: 128px;
             position: relative;
             background-color:  #F2F5F4;
             border-radius: 50%;
             overflow: hidden;
-            margin-bottom: 2rem;
+            margin-bottom: 20px;
             img{
-                width: 6.8rem;
-                height: 6.8rem;
+                width: 68px;
+                height: 68px;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -42,14 +44,14 @@
         }
         &__title{
             font-weight: 700;
-            font-size: 2.7rem;
+            font-size: 27px;
             line-height: 1.2;
             color: $font-color;
-            margin-bottom: 2rem;
+            margin-bottom: 20px;
         }
         &__desk{
             font-weight: 300;
-            font-size: 1.8rem;
+            font-size: 18px;
             line-height: 1.2;
             color: $gray;
         }

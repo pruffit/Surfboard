@@ -6,20 +6,20 @@
         align-items: center;
         .feature{
             &__icon{
-                width: 3.5rem;
-                height: 3.5rem;
-                margin-right: 1.4rem;
+                width: 35px;
+                height: 35px;
+                margin-right: 14px;
             }
             &__text{
                 font-weight: 700;
-                font-size: 1.6rem;
+                font-size: 16px;
                 line-height: 1.1;
                 color: $white;
-                max-width: 9rem;
+                max-width: 900px;
             }
         }
         &:not(:last-child){
-            margin-right: 3.3rem;
+            margin-right: 33px;
         }
     }
 }

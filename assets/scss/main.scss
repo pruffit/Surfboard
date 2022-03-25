@@ -20,16 +20,12 @@ p{
     list-style: none;
 }
 html{
-    font-size: 62.5%;
     font-family: $font-family;
 }
 body{
     background-color: $white;
 }
-.container{
-    max-width: 94rem;
-    margin: 0 auto;
-}
+@import "blocks/_container.scss";
 @import "blocks/_btn.scss";
 @import "blocks/_section.scss";
 @import "blocks/_header.scss";

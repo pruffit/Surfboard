@@ -1,4 +1,4 @@
-.lead-form-section{
+.lead-form{
     background: linear-gradient(180deg, rgba(23, 23, 48, 0) 0%, #2B2B2B 100%), url(../images/lead-form/bg.jpg), #2B2B2B center top no-repeat;
     background-size: cover;
     .section__title{
@@ -10,27 +10,27 @@
     &__col{
         flex: 1;
         &:not(:last-child){
-            margin-right: 2rem;
+            margin-right: 20px;
         }
     }
     &__row{
         display: flex;
         &:not(:last-child){
-            margin-bottom: 1.2rem;
+            margin-bottom: 12px;
         }
     }
     &__block{
         flex: 1;
         &:not(:last-child){
-            margin-right: 2rem;
+            margin-right: 20px;
         }
     }
     &__input{
         width: 100%;
         border: 3px solid transparent;
-        padding: 1.8rem 1.2rem;
+        padding: 18px 12px;
         font-weight: 400;
-        font-size: 1.8rem;
+        font-size: 18px;
         line-height: 1.2;
         color: $font-color;
         &:focus{
@@ -38,19 +38,19 @@
             outline: none;
         }
         &--textarea{
-            height: 15.2rem;
+            height: 152px;
             resize: none;
         }
     }
     &__controls{
         display: flex;
         &:not(:last-child){
-            margin-bottom: 2rem;
+            margin-bottom: 20px;
         }
     }
     &__title{
         font-weight: 400;
-        font-size: 1.8rem;
+        font-size: 18px;
         line-height: 1.2;
         color: $white;
     }
