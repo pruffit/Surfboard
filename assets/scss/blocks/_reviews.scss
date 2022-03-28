@@ -1,15 +1,32 @@
 .reviews{
     &__display{
         background-color: #F8FAF9;
-        padding: rem(42px);
-        margin-bottom: rem(15px);
+        padding: rem(56px) rem(24px) rem(46px);
+        margin-bottom: rem(32px);
+        @include _Desktop{
+            padding: rem(42px);
+            margin-bottom: rem(15px);
+        }
         &-inner{
             display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            @include _Desktop{
+                text-align: left;
+                flex-direction: row;
+            }
         }
     }
     &__avatar{
-        width: rem(254px);
-        height: rem(264px);
+        width: rem(130px);
+        height: rem(132px);
+        margin-bottom: rem(32px);
+        @include _Desktop{
+            margin-bottom: 0;
+            width: rem(254px);
+            height: rem(264px);
+        }
         img{
             object-fit: cover;
             width: 100%;
@@ -18,14 +35,20 @@
     }
     &__content{
         flex: 1;
-        margin-left: rem(40px);
+        margin-left: 0;
+        @include _Desktop{
+            margin-left: rem(40px);
+        }
     }
     &__title{
         font-weight: 700;
         font-size: rem(27px);
         line-height: 1.2;
         color: $font-color;
-        margin-bottom: rem(14px);
+        margin-bottom: rem(16px);
+        @include _Desktop{
+            margin-bottom: rem(14px);
+        }
     }
     &__text{
         p{
@@ -34,7 +57,10 @@
             line-height: 1.2;
             color: $gray;   
         }
-        margin-bottom: rem(25px);
+        margin-bottom: rem(16px);
+        @include _Desktop{
+            margin-bottom: rem(25px);
+        }
     }   
     &__author{
         font-weight: 500;
