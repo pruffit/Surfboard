@@ -1,0 +1,26 @@
+.social{
+    &__list{
+        display: flex;
+        align-items: center;
+    }
+    &__item{
+        &:not(:last-child){
+            margin-right: rem(14px);
+        }
+    }
+    &__link{
+        display: inline-block;
+        text-decoration: none;
+        &:hover{
+            svg{
+                fill: $font-color;
+            }
+        }
+        svg{
+            width: rem(20px);
+            height: rem(20px);
+            transition: all .2s ease-in-out;
+            fill: $gray;
+        }
+    }
+}

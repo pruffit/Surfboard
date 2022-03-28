@@ -52,7 +52,7 @@
         color: $font-color;
         border-radius: rem(4px);
         @include _Desktop{
-            padding: rem(18px) rem(12px);
+            padding: rem(15.6px) rem(12px);
             font-size: rem(18px);
         }
         &:focus{

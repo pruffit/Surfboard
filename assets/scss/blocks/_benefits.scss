@@ -25,7 +25,7 @@
         &:not(:last-child){
             &::before{
                 position: absolute;
-                content: url(../images/why/4.svg);
+                content: url(../images/why/1.svg);
                 top: rem(44px);
                 right: 0;
                 transform: translateX(50%);
@@ -63,13 +63,14 @@
                 margin-right: 0;
                 margin-bottom: rem(20px); 
             }
-            img{
+            .image{
                 width: rem(68px);
                 height: rem(68px);
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                fill: $black;
             }
         }
         &__title{

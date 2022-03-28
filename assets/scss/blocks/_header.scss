@@ -27,6 +27,11 @@
     .logo{
         display: inline-block;
         text-decoration: none;
+        svg{
+            width: rem(56px);
+            height: rem(40px);
+            fill: $white;
+        }
     }
     .burger{
         text-decoration: none;
@@ -92,6 +97,7 @@
             width: rem(13px);
             height: rem(14px);
             margin-right: rem(5px);
+            fill: $white;
         }
         &__text{
             font-weight: 700;

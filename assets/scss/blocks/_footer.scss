@@ -1,0 +1,66 @@
+.footer{
+    min-height: rem(150px);
+    background-color: $white;
+    @include _Tablet{
+        min-height: rem(100px);
+    }
+    @include _Desktop{
+        min-height: rem(90px);
+    }
+    .container{
+        height: 100%;
+    }
+    &__inner{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @include _Tablet{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &__contacts{
+        &-list{}
+        &-item{
+            margin-bottom: rem(12px);
+            @include _Tablet{
+                margin-bottom: 0;
+            }
+        }
+        &-link{
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: rem(21px);
+            line-height: 1;
+            color: $font-color;
+            margin-bottom: 0;
+            @include _Tablet{
+                margin-bottom: rem(6px);
+            }
+        }
+        .phone-number{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            justify-content: center;
+            @include _Tablet{
+                justify-content: initial;
+            }
+            &__icon{    
+                width: rem(12px);
+                height: rem(12px);
+                margin-right: rem(7px);
+                fill: $font-color;
+            }
+            &__text{
+                font-weight: 400;
+                font-size: rem(21px);
+                line-height: 1;
+                color: $font-color;
+            }
+        }
+    }
+}
