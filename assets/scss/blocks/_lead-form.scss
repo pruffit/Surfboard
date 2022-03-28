@@ -7,16 +7,30 @@
 }
 .form{
     display: flex;
+    flex-direction: column;
+    padding: 0 17%;
+    @include _Desktop{
+        flex-direction: row;
+        padding: 0;
+    }
     &__col{
         flex: 1;
         &:not(:last-child){
-            margin-right: rem(20px);
+            margin-right: 0;
+            margin-bottom: rem(14px);
+            @include _Desktop{
+                margin-bottom: 0;
+                margin-right: rem(20px);
+            }
         }
     }
     &__row{
         display: flex;
         &:not(:last-child){
-            margin-bottom: rem(12px);
+            margin-bottom: rem(14px);
+            @include _Desktop{
+                margin-bottom: rem(12px);
+            }
         }
     }
     &__block{
@@ -28,24 +42,35 @@
     &__input{
         width: 100%;
         border: rem(3px) solid transparent;
-        padding: rem(18px) rem(12px);
+        padding: rem(6.6px) rem(10px);
         font-weight: 400;
-        font-size: rem(18px);
+        font-size: rem(14px);
         line-height: 1.2;
         color: $font-color;
+        border-radius: rem(4px);
+        @include _Desktop{
+            padding: rem(18px) rem(12px);
+            font-size: rem(18px);
+        }
         &:focus{
             border: rem(3px) solid $yellow;
             outline: none;
         }
         &--textarea{
-            height: rem(152px);
+            height: rem(82px);
             resize: none;
+            @include _Desktop{
+                height: rem(152px);
+            }
         }
     }
     &__controls{
         display: flex;
         &:not(:last-child){
-            margin-bottom: rem(20px);
+            margin-bottom: rem(25px);
+            @include _Desktop{
+                margin-bottom: rem(20px);
+            }
         }
     }
     &__title{
@@ -53,5 +78,12 @@
         font-size: rem(18px);
         line-height: 1.2;
         color: $white;
+    }
+    &__btns{
+        display: flex;
+        justify-content: center;
+        @include _Desktop{
+            justify-content: initial;
+        }
     }
 }
