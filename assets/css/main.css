@@ -37,9 +37,15 @@ body {
 }
 
 .container {
-  max-width: calc($container + 60px);
+  max-width: 960px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1000px;
+    padding: 0 3rem;
+  }
 }
 @media screen and (min-width: 1100px) {
   .container {
@@ -96,7 +102,7 @@ body {
 
 .section {
   height: 100vh;
-  min-height: 65rem;
+  min-height: 90rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,17 +114,32 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (min-width: 768px) {
+  .section {
+    min-height: 65rem;
+  }
+}
 .section .title {
   font-weight: 700;
-  font-size: 4.8rem;
+  font-size: 4rem;
   line-height: 1.2;
   color: #292929;
   margin-bottom: 3rem;
   text-align: center;
   text-transform: uppercase;
 }
+@media screen and (min-width: 768px) {
+  .section .title {
+    font-size: 4.8rem;
+  }
+}
 .section .title--headline {
-  margin-bottom: 1.7rem;
+  margin-bottom: 0.9rem;
+}
+@media screen and (min-width: 768px) {
+  .section .title--headline {
+    margin-bottom: 1.7rem;
+  }
 }
 .section .title--white {
   color: #fff;
@@ -140,8 +161,13 @@ body {
   top: 0;
   left: 0;
   height: 9rem;
-  padding: 0 3rem;
+  padding: 0 1rem;
   z-index: 100;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0 3rem;
+  }
 }
 @media screen and (min-width: 1100px) {
   .header {
@@ -313,10 +339,18 @@ body {
 .hero__main-title {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 4.8rem;
+  font-size: 4rem;
   line-height: 1.2;
   color: #fff;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.2rem;
+  word-break: break-all;
+}
+@media screen and (min-width: 768px) {
+  .hero__main-title {
+    word-break: keep-all;
+    font-size: 4.8rem;
+    margin-bottom: 0.9rem;
+  }
 }
 @media screen and (min-width: 1100px) {
   .hero__main-title {
@@ -325,10 +359,15 @@ body {
 }
 .hero__title-desc {
   font-weight: 400;
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   line-height: 1.2;
   color: #fff;
   margin-bottom: 4.4rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__title-desc {
+    font-size: 2.1rem;
+  }
 }
 @media screen and (min-width: 1100px) {
   .hero__title-desc {
@@ -383,7 +422,12 @@ body {
   font-size: 1.8rem;
   line-height: 1.2;
   color: #666666;
-  padding: 0 19%;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .headline__subtitle {
+    padding: 0 19%;
+  }
 }
 @media screen and (min-width: 1100px) {
   .headline__subtitle {
@@ -395,13 +439,30 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .benefits__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 .benefits__item {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 0 1%;
+  padding: 0;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .benefits__item {
+    padding: 0 1%;
+  }
 }
 @media screen and (min-width: 1100px) {
   .benefits__item {
@@ -429,17 +490,39 @@ body {
   }
 }
 .benefits .benefit {
-  text-align: center;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.benefits .benefit:not(:last-child) {
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .benefits .benefit {
+    text-align: center;
+    display: initial;
+  }
+  .benefits .benefit:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 .benefits .benefit__image {
   display: inline-block;
-  width: 12.8rem;
+  min-width: 12.8rem;
   height: 12.8rem;
   position: relative;
   background-color: #F2F5F4;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
+  margin-right: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .benefits .benefit__image {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
 }
 .benefits .benefit__image img {
   width: 6.8rem;
@@ -455,7 +538,12 @@ body {
   font-size: 2.7rem;
   line-height: 1.2;
   color: #292929;
-  margin-bottom: 0.7rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .benefits .benefit__title {
+    margin-bottom: 0.7rem;
+  }
 }
 @media screen and (min-width: 1100px) {
   .benefits .benefit__title {
@@ -471,8 +559,14 @@ body {
 
 .reviews__display {
   background-color: #F8FAF9;
-  padding: 5.6rem 2.4rem 4.6rem;
-  margin-bottom: 3.2rem;
+  padding: 5.6rem 2.5rem 3rem;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .reviews__display {
+    padding: 5.6rem 2.4rem 4.6rem;
+    margin-bottom: 3.2rem;
+  }
 }
 @media screen and (min-width: 1100px) {
   .reviews__display {
@@ -616,7 +710,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 17%;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .form {
+    padding: 0 17%;
+  }
 }
 @media screen and (min-width: 1100px) {
   .form {
@@ -696,6 +795,20 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .form__controls {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+  }
 }
 .form__controls:not(:last-child) {
   margin-bottom: 2.5rem;
@@ -739,9 +852,28 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .radio {
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+    width: auto;
+  }
 }
 .radio:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: 0;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .radio:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
 }
 @media screen and (min-width: 1100px) {
   .radio:not(:last-child) {

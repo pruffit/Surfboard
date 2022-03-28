@@ -1,8 +1,12 @@
 .reviews{
     &__display{
         background-color: #F8FAF9;
-        padding: rem(56px) rem(24px) rem(46px);
-        margin-bottom: rem(32px);
+        padding: rem(56px) rem(25px) rem(30px);
+        margin-bottom: rem(30px);
+        @include _Tablet{
+            padding: rem(56px) rem(24px) rem(46px);
+            margin-bottom: rem(32px);
+        }
         @include _Desktop{
             padding: rem(42px);
             margin-bottom: rem(15px);

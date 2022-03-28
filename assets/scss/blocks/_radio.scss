@@ -3,8 +3,19 @@
     align-items: center;
     cursor: pointer;
     user-select: none;
+    width: 100%;
+    justify-content: center;
+    @include _Tablet{
+        justify-content: initial;
+        width: auto;
+    }
     &:not(:last-child){
-        margin-right: rem(10px);
+        margin-right: 0;
+        margin-bottom: rem(20px);
+        @include _Tablet{
+            margin-bottom: 0;
+            margin-right: rem(10px);
+        }
         @include _Desktop{
             margin-right: rem(20px);
         }

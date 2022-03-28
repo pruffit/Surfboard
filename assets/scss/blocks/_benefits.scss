@@ -1,11 +1,18 @@
 .benefits{
     &__content{
         display: flex;
+        flex-direction: column;
+        @include _Tablet{
+            flex-direction: row;
+        }
     }
     &__item{
         flex: 1;
-        padding: 0 1%;
+        padding: 0;
         position: relative;
+        @include _Tablet{
+            padding: 0 1%;
+        }
         @include _Desktop{
             padding: 0 3%;
         }
@@ -30,16 +37,32 @@
         }
     }
     .benefit{
-        text-align: center;
+        text-align: left;
+        display: flex;
+        &:not(:last-child){
+            margin-bottom: rem(30px);
+        }
+        @include _Tablet{
+            text-align: center;
+            display: initial;
+            &:not(:last-child){
+                margin-bottom: 0;
+            }
+        }
         &__image{
             display: inline-block;
-            width: rem(128px);
+            min-width: rem(128px);
             height: rem(128px);
             position: relative;
             background-color:  #F2F5F4;
             border-radius: 50%;
             overflow: hidden;
-            margin-bottom: rem(20px);
+            margin-bottom: 0;
+            margin-right: rem(12px);
+            @include _Tablet{
+                margin-right: 0;
+                margin-bottom: rem(20px); 
+            }
             img{
                 width: rem(68px);
                 height: rem(68px);
@@ -54,7 +77,10 @@
             font-size: rem(27px);
             line-height: 1.2;
             color: $font-color;
-            margin-bottom: rem(7px);
+            margin-bottom: rem(10px);
+            @include _Tablet{
+                margin-bottom: rem(7px); 
+            }
             @include _Desktop{
                 margin-bottom: rem(20px);
             }

@@ -33,20 +33,29 @@
     &__main-title{
         text-transform: uppercase;
         font-weight: 700;
-        font-size: rem(48px);
+        font-size: rem(40px);
         line-height: 1.2;
         color: $white;
-        margin-bottom: rem(9px);
+        margin-bottom: rem(12px);
+        word-break: break-all;
+        @include _Tablet{
+            word-break: keep-all;
+            font-size: rem(48px);
+            margin-bottom: rem(9px);
+        }
         @include _Desktop{
             margin-bottom: rem(17px);
         }
     }
     &__title-desc{
         font-weight: 400;
-        font-size: rem(21px);
+        font-size: rem(18px);
         line-height: 1.2;
         color: $white;
         margin-bottom: rem(44px);
+        @include _Tablet{
+            font-size: rem(21px);
+        }
         @include _Desktop{
             margin-bottom: rem(39px);
         }

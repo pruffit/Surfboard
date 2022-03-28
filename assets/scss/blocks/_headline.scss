@@ -6,7 +6,10 @@
         font-size: rem(18px);
         line-height: 1.2;
         color: $gray;
-        padding: 0 19%;
+        padding: 0;
+        @include _Tablet{
+            padding: 0 19%;
+        }
         @include _Desktop{
             padding: 0 27%;
         }

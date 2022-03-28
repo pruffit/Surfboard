@@ -8,8 +8,11 @@
     top: 0;
     left: 0;
     height: rem(90px);
-    padding: 0 rem(30px);
+    padding: 0 rem(10px);
     z-index: 100;
+    @include _Tablet{
+        padding: 0 rem(30px);
+    }
     @include _Desktop{
         width: auto;
         position: sticky;

@@ -8,7 +8,10 @@
 .form{
     display: flex;
     flex-direction: column;
-    padding: 0 17%;
+    padding: 0;
+    @include _Tablet{
+        padding: 0 17%;
+    }
     @include _Desktop{
         flex-direction: row;
         padding: 0;
@@ -66,6 +69,12 @@
     }
     &__controls{
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include _Tablet{
+            flex-wrap: nowrap;
+            justify-content: initial;
+        }
         &:not(:last-child){
             margin-bottom: rem(25px);
             @include _Desktop{

@@ -1,9 +1,13 @@
 .container{
-    max-width: calc($container + 60px);
+    max-width: $containerM;
     margin: 0 auto;
-    padding: 0 rem(30px);
+    padding: 0 rem(10px);
+    @include _Tablet{
+        max-width: $containerT;
+        padding: 0 rem(30px);
+    }
     @include _Desktop{
-        max-width: $container;
+        max-width: $containerD;
         padding: 0;
     }
     &--hero{
