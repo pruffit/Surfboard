@@ -1,0 +1,256 @@
+.product{
+    background-color: #F8FAF9;
+    .product-slider{
+        position: relative;
+        &__prev{
+            position: absolute;
+            top: 28%;
+            transform: translateY(-50%);
+            left: 0;
+            text-decoration: none;
+            display: flex;
+            @include _Tablet{
+                top: 31%;
+                left: 20%;
+            }
+            @include _Desktop{
+                top: 50%;
+                left: rem(-20px);
+            }
+            svg{
+                width: rem(13.5px);
+                height: rem(27px);
+                fill: transparent;
+                stroke: $black; 
+                stroke-width: 2; 
+                stroke-linecap: round;
+            }
+        }
+        &__next{
+            position: absolute;
+            top: 28%;
+            transform: translateY(-50%);
+            right: 0;
+            text-decoration: none;
+            display: flex;
+            @include _Tablet{
+                top: 31%;
+                right: 20%;
+            }
+            @include _Desktop{
+                top: 50%;
+                right: rem(-20px);
+            }
+            svg{
+                width: rem(13.5px);
+                height: rem(27px);
+                fill: transparent;
+                stroke: $black; 
+                stroke-width: 2; 
+                stroke-linecap: round;
+            }
+        }
+        .slide{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            @include _Desktop{
+                grid-template-columns: repeat(2, 1fr);
+            }
+            &__image{
+                position: relative;
+                height: rem(330px);
+                @include _Tablet{
+                    height: rem(400px);
+                }
+                @include _Desktop{
+                    height: rem(600px);
+                }
+                svg{
+                    width: rem(244px);
+                    height: rem(232px);
+                    fill: #ECECEC;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    @include _Tablet{
+                        width: rem(306px);
+                        height: rem(292px);
+                    }
+                    @include _Desktop{
+                        width: rem(396px);
+                        height: rem(378px);
+                    }
+                }
+                img{
+                    width: rem(244px);
+                    height: rem(330px);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    @include _Tablet{
+                        width: rem(306px);
+                        height: rem(414px);
+                    }
+                    @include _Desktop{
+                        width: rem(400px);
+                        height: rem(540px);
+                    }
+                }
+            }
+            &__right{
+                text-align: center;
+                @include _Desktop{
+                    text-align: left;
+                }
+                .parameters{
+                    position: relative;
+                    display: none;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: rem(91px);
+                    height: rem(91px);
+                    background-color: $blue;
+                    border-radius: 4px;
+                    margin-bottom: rem(52px);
+                    cursor: default;
+                    @include _Desktop{
+                        display: flex;
+                    }
+                    &:hover{
+                        .parameters__inner{
+                            display: flex;
+                        }
+                    }
+                    &-img{
+                        width: rem(38px);
+                        height: rem(38px);
+                        fill: $white;
+                        margin-bottom: rem(7px);
+                    }
+                    &-text{
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: rem(14px);
+                        line-height: 1;
+                        color: $white;
+                    }
+                    &__inner{
+                        display: none;
+                        flex-direction: column;
+                        background-color: rgba($white, .8);
+                        box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+                        backdrop-filter: blur(40px);
+                        border-radius: 4px;
+                        position: absolute;
+                        top: 0;
+                        left: rem(91px);
+                        padding: rem(33px) rem(25px) rem(33px) rem(30px);
+                    }
+                    &__row{
+                        display: flex;
+                        align-items: center;
+                        &:not(:last-child){
+                            margin-bottom: rem(28px);
+                        }
+                        &-img{
+                            width: rem(24px);
+                            height: rem(24px);
+                            fill: #010002;
+                            margin-right: rem(16px);
+                        }
+                        &-text{
+                            white-space: nowrap;
+                            font-weight: 500;
+                            font-size: rem(16px);
+                            line-height: 1.5;
+                            color: $black;
+                            width: rem(127px);
+                        }
+                        &-info{
+                            white-space: nowrap;
+                            font-weight: 400;
+                            font-size: rem(16px);
+                            line-height: 1.5;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+            &__title{
+                font-weight: 700;
+                font-size: rem(30px);
+                line-height: 1;
+                color: $font-color;
+                margin-bottom: rem(13px);
+                @include _Tablet{
+                    margin-bottom: rem(14px);
+                }
+                @include _Desktop{
+                    font-size: rem(36px);
+                    margin-bottom: rem(24px);
+                }
+            }
+            &__text{
+                font-weight: 400;
+                font-size: rem(18px);
+                line-height: 1.2;
+                color: #666666;
+                margin-bottom: rem(22px);
+                padding: 0 8%;
+                @include _Tablet{
+                    margin-bottom: rem(24px);
+                    padding: 0 13%;
+                }
+                @include _Desktop{
+                    padding: 0;
+                }
+            }
+            &__description{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                margin-bottom: rem(22px);
+                @include _Tablet{
+                    margin-bottom: rem(24px);
+                }
+                &-item{
+                    display: flex;
+                    flex-direction: column;
+                }
+                &-title{
+                    font-weight: 400;
+                    font-size: rem(18px);
+                    line-height: 1.2;
+                    color: #666666;
+                }
+                &-info{
+                    font-weight: 700;
+                    font-size: rem(18px);
+                    line-height: 1.2;
+                    color: $black;
+                }
+            }
+            &__footer{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include _Desktop{
+                    justify-content: initial;
+                }
+                &-price{
+                    font-weight: 300;
+                    font-size: rem(40px);
+                    line-height: 1;
+                    color: $black;
+                    margin-right: rem(8px);
+                    @include _Tablet{
+                        font-size: rem(60px);
+                        margin-right: rem(28px);
+                    }
+                }
+            }
+        }
+    }
+}
