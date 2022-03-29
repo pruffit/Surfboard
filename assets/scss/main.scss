@@ -26,6 +26,10 @@ html{
 }
 body{
     background-color: $white;
+    overflow: initial;
+    &.no-scroll{
+        overflow: hidden;
+    }
 }
 .wrapper{
     overflow: hidden;
@@ -48,4 +52,5 @@ body{
 @import "blocks/_map.scss";
 @import "blocks/_footer.scss";
 @import "blocks/_social.scss";
+@import "blocks/_burger-menu.scss";
 @import "blocks/_fixed-menu.scss";
