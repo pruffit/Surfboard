@@ -5,6 +5,9 @@
     border-radius: 50%;
     overflow: hidden;
     position: relative;
+    &:hover{
+        border: rem(6px) solid $yellow; 
+    }
     &.active{
         border: rem(6px) solid $yellow; 
     }

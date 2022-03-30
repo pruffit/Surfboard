@@ -955,6 +955,27 @@ body.no-scroll {
             flex-direction: row;
   }
 }
+.reviews__list {
+  position: relative;
+  min-height: 28rem;
+  width: 100%;
+}
+.reviews__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.reviews__item.active {
+  position: static;
+  opacity: 1;
+  pointer-events: unset;
+}
 .reviews__avatar {
   width: 13rem;
   height: 13.2rem;
@@ -1032,6 +1053,9 @@ body.no-scroll {
   border-radius: 50%;
   overflow: hidden;
   position: relative;
+}
+.interactive-avatar:hover {
+  border: 0.6rem solid #FEDB3F;
 }
 .interactive-avatar.active {
   border: 0.6rem solid #FEDB3F;
