@@ -14,7 +14,7 @@
     }
     &.error-send{
         .formModal__content{
-
+            border: 2px solid red;
         }
     }
     &__content{
@@ -26,6 +26,7 @@
         padding: rem(38px) rem(68px);
         background-color: $white;
         max-width: rem(420px);
+        border: 2px solid $white;
         span{
             font-weight: 500;
             font-size: rem(18px);

@@ -582,6 +582,12 @@ body.no-scroll {
 .product .product-slider {
   position: relative;
 }
+.product .product-slider .bx-wrapper {
+  border: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
 .product .product-slider__prev {
   position: absolute;
   top: 28%;
@@ -1765,6 +1771,9 @@ body.no-scroll {
   display: -ms-flexbox;
   display: flex;
 }
+.formModal.error-send .formModal__content {
+  border: 2px solid red;
+}
 .formModal__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1783,6 +1792,7 @@ body.no-scroll {
   padding: 3.8rem 6.8rem;
   background-color: #fff;
   max-width: 42rem;
+  border: 2px solid #fff;
 }
 .formModal__content span {
   font-weight: 500;

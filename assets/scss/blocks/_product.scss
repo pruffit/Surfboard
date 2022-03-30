@@ -2,6 +2,11 @@
     background-color: #F8FAF9;
     .product-slider{
         position: relative;
+        .bx-wrapper{
+            border: none;
+            background-color: transparent;
+            box-shadow: none;
+        }
         &__prev{
             position: absolute;
             top: 28%;

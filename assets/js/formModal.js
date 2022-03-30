@@ -48,5 +48,6 @@ $(document).ready(function() {
                 formModal.addClass("active");
             });
         }
+        $('form[name=form]').trigger('reset');
     });
 });
