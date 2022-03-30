@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/normalize/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
     <link rel="stylesheet" href="assets/css/main.css">
     <title>Surfboard</title>
 </head>
@@ -545,19 +546,20 @@
                         закажите доску
                     </h2>
                     <form class="form" action="/">
+                        <input type="hidden" name="to" value="somewhere@mail.com">
                         <div class="form__col">
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">
                                         Имя
                                     </div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="name">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">
                                         Телефон
                                     </div>
-                                    <input type="tel" class="form__input">
+                                    <input type="tel" class="form__input" name="phone">
                                 </label>
                             </div>
                             <div class="form__row">
@@ -565,7 +567,7 @@
                                     <div class="form__title">
                                         Улица
                                     </div>
-                                    <input type="tel" class="form__input">
+                                    <input type="tel" class="form__input" name="street">
                                 </label>
                             </div>
                             <div class="form__row">
@@ -573,25 +575,25 @@
                                     <div class="form__title">
                                         Дом
                                     </div>
-                                    <input type="tel" class="form__input">
+                                    <input type="tel" class="form__input" name="house">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">
                                         Корпус
                                     </div>
-                                    <input type="tel" class="form__input">
+                                    <input type="tel" class="form__input" name="part">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">
                                         Квартира
                                     </div>
-                                    <input type="tel" class="form__input">
+                                    <input type="tel" class="form__input" name="appartment">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">
                                         Этаж
                                     </div>
-                                    <input type="tel" class="form__input">
+                                    <input type="tel" class="form__input" name="floor">
                                 </label>
                             </div>
                         </div>
@@ -601,19 +603,19 @@
                                     <div class="form__title">
                                         Комментарий
                                     </div>
-                                    <textarea type="tel" class="form__input form__input--textarea"></textarea>
+                                    <textarea type="tel" class="form__input form__input--textarea" name="comment"></textarea>
                                 </label>
                             </div>
                             <div class="form__controls">
                                 <label class="radio">
-                                    <input type="radio" name="option">
+                                    <input type="radio" name="option" name="cash">
                                     <div class="radio__visible"></div>
                                     <div class="radio__title">
                                         Оплата наличными
                                     </div>
                                 </label>
                                 <label class="radio">
-                                    <input type="radio" name="option">
+                                    <input type="radio" name="option" name="card">
                                     <div class="radio__visible"></div>
                                     <div class="radio__title">
                                         Оплата картой
@@ -622,7 +624,7 @@
                             </div>
                             <div class="form__controls">
                                 <label class="radio radio--checkbox">
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="cash">
                                     <div class="radio__visible"></div>
                                     <div class="radio__title">
                                         Оплата наличными
@@ -733,6 +735,12 @@
             </nav>
         </div>
     </div>
+    <div class="formModal">
+        <div class="formModal__content">
+            <span></span>
+            <a href="#" class="btn btn--theme--yellow formModal__close">ЗАКРЫТЬ</a>
+        </div>
+    </div>
     <nav class="fixed-menu">
         <ul class="fixed-menu__list">
             <li class="fixed-menu__item active">
@@ -765,8 +773,10 @@
         </ul>
     </nav>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="assets/js/burger.js"></script>
     <script src="assets/js/tabs.js"></script>
     <script src="assets/js/accordeon.js"></script>
+    <script src="assets/js/formModal.js"></script>
 </body>
 </html>

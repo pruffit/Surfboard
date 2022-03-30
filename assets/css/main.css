@@ -1391,6 +1391,9 @@ body.no-scroll {
   border: 0.3rem solid #FEDB3F;
   outline: none;
 }
+.form__input.errorInput {
+  border: 0.3rem solid red;
+}
 .form__input--textarea {
   height: 8.2rem;
   resize: none;
@@ -1739,6 +1742,54 @@ body.no-scroll {
   width: inherit;
   height: inherit;
   fill: #fff;
+}
+
+.formModal {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #333537;
+  z-index: 10000;
+}
+.formModal.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.formModal__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3.8rem 6.8rem;
+  background-color: #fff;
+  max-width: 42rem;
+}
+.formModal__content span {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 1.8rem;
 }
 
 .fixed-menu {

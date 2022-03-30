@@ -59,6 +59,9 @@
             border: rem(3px) solid $yellow;
             outline: none;
         }
+        &.errorInput{
+            border: rem(3px) solid red;
+        }
         &--textarea{
             height: rem(82px);
             resize: none;

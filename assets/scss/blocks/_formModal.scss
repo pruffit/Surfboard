@@ -1,0 +1,37 @@
+.formModal{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333537;
+    z-index: 10000;
+    &.active{
+        display: flex;
+    }
+    &.error-send{
+        .formModal__content{
+
+        }
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: rem(38px) rem(68px);
+        background-color: $white;
+        max-width: rem(420px);
+        span{
+            font-weight: 500;
+            font-size: rem(18px);
+            line-height: 1.2;
+            color: $black;
+            margin-bottom: rem(18px);
+        }
+    }
+}
