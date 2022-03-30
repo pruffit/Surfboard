@@ -3,11 +3,10 @@
     background: url(../images/hero/bg.png) 85% center no-repeat;
     background-size: auto 100%;
     background-color: #335487;
-    height: 74vh;
+    height: 90vh;
     min-height: rem(650px);
     padding: rem(24px) 0 rem(70px);
     @include _Tablet{
-        height: 90vh;
         background: url(../images/hero/bg.png) right center no-repeat;
         background-size: cover;
     }
