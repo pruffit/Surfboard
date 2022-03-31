@@ -1,4 +1,4 @@
-$(window).on("load resize",function(e){
+$(document).ready(function() {
     const slider = $(".product-slider__list").bxSlider({
         pager: false,
         controls: false
