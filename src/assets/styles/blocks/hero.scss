@@ -1,17 +1,14 @@
 .hero{
-    margin-top: rem(90px);
     background: url(../images/hero/bg.png) 85% center no-repeat;
     background-size: auto 100%;
     background-color: #335487;
-    height: 90vh;
-    min-height: rem(650px);
+    height: 100%;
     padding: rem(24px) 0 rem(70px);
     @include _Tablet{
         background: url(../images/hero/bg.png) right center no-repeat;
         background-size: cover;
     }
     @include _Desktop{
-        height: 100vh;
         margin-top: 0;
         background: url(../images/hero/bg.png) center center no-repeat;
         background-size: cover;

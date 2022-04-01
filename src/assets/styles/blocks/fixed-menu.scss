@@ -1,9 +1,24 @@
 .fixed-menu{
     position: fixed;
-    top: 20%;
+    top: 50%;
+    transform: translateY(-50%);
     right: 3%;
     z-index: $z-fixed-menu;
-    display: none;  
+    display: none;
+    &.dark{
+        .fixed-menu__item{
+            &.active{
+                .fixed-menu__link{
+                    border: rem(1px) solid $font-color;
+                }
+            }
+            .fixed-menu__link{
+                &::before{
+                    background-color: $font-color;
+                }
+            }
+        }
+    }  
     @include _Desktop{
         display: block;
     }
@@ -11,6 +26,7 @@
         &.active{
             .fixed-menu__link{
                 border: rem(1px) solid $white;
+                transition: all .2s ease-in-out;
             }
         }
         &:not(:last-child){
@@ -32,6 +48,7 @@
             height: rem(8px);
             border-radius: 50%;
             background-color: $white;
+            transition: all .2s ease-in-out;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);

@@ -26,7 +26,6 @@ html{
 }
 body{
     background-color: $white;
-    overflow: initial;
     &.no-scroll{
         overflow: hidden;
     }
@@ -35,6 +34,11 @@ body{
     overflow: hidden;
     position: relative;
     width: 100%;
-    min-height: 100%;
+    height: 100vh;
+}
+.maincontent{
+    height: 100%;
+    transition: transform 1s ease-in-out;
+    will-change: transform;
 }
 @import "blocks/*.scss"
