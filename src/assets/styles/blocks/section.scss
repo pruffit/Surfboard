@@ -1,11 +1,12 @@
 .section{
-    height: 100vh;
-    min-height: rem(900px);
+    height: 90vh;
+    min-height: rem(750px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
     @include _Tablet{
+        height: 100vh;
         min-height: rem(650px);
     }
     .title{
@@ -27,6 +28,22 @@
         }
         &--white{
             color: $white;
+        }
+        &--product-menu{
+            color: $white;
+            position: absolute;
+            top: 8%;
+            left: 2%;
+            margin-bottom: 0;
+            line-height: 1;
+            @include _Tablet{
+                top: 10%;
+                left: 6%;
+            }
+            @include _Desktop{
+                top: 20%;
+                left: 10%;
+            }
         }
     }
 }
