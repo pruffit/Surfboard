@@ -100,7 +100,7 @@ task('watch', () => {
  watch('./src/assets/styles/**/*.scss', series('styles'));
  watch('./src/*.html', series('copy:html'));
  watch('./src/assets/scripts/*.js', series('scripts'));
- watch('./src/assets/images/icons/*.svg', series('images'));
+ watch('./src/assets/images/**/*', series('images'));
 });
  
  

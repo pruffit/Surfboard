@@ -7,6 +7,6 @@ module.exports = {
     ],
     JS_LIBS : [
       'node_modules/jquery/dist/jquery.js',
-      'node_modules/bxslider/dist/jquery.bxslider.min.js'
+      'node_modules/bxslider/dist/jquery.bxslider.min.js',
     ]
    }
