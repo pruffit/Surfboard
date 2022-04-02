@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap');
-@import "_vars";
-@import "_mixins";
-@import "_media";
+@import "vars";
+@import "mixins";
+@import "media";
 *,
 *::after,
 *::before{
@@ -26,15 +26,14 @@ html{
 }
 body{
     background-color: $white;
-    &.no-scroll{
-        overflow: hidden;
-    }
+    height: 100vh;
+    overflow: hidden;
 }
 .wrapper{
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 .maincontent{
     height: 100%;

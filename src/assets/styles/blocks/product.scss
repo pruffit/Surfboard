@@ -6,6 +6,7 @@
             border: none;
             background-color: transparent;
             box-shadow: none;
+            margin-bottom: 0;
         }
         &__prev{
             position: absolute;
@@ -63,7 +64,10 @@
             }
             &__image{
                 position: relative;
-                height: rem(330px);
+                height: rem(230px);
+                @include _Mobile{
+                    height: rem(330px);
+                }
                 @include _Tablet{
                     height: rem(400px);
                 }
@@ -71,13 +75,17 @@
                     height: rem(600px);
                 }
                 svg{
-                    width: rem(244px);
-                    height: rem(232px);
+                    width: rem(180px);
+                    height: rem(180px);
                     fill: #ECECEC;
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
+                    @include _Mobile{
+                        width: rem(244px);
+                        height: rem(232px);
+                    }
                     @include _Tablet{
                         width: rem(306px);
                         height: rem(292px);
@@ -88,12 +96,16 @@
                     }
                 }
                 img{
-                    width: rem(244px);
-                    height: rem(330px);
+                    width: rem(180px);
+                    height: rem(220px);
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
+                    @include _Mobile{
+                        width: rem(244px);
+                        height: rem(330px);
+                    }
                     @include _Tablet{
                         width: rem(306px);
                         height: rem(414px);
@@ -186,10 +198,14 @@
             }
             &__title{
                 font-weight: 700;
-                font-size: rem(30px);
+                font-size: rem(20px);
                 line-height: 1;
                 color: $font-color;
-                margin-bottom: rem(13px);
+                margin-bottom: rem(10px);
+                @include _Mobile{
+                    font-size: rem(30px);
+                    margin-bottom: rem(13px);
+                }
                 @include _Tablet{
                     margin-bottom: rem(14px);
                 }
@@ -200,11 +216,16 @@
             }
             &__text{
                 font-weight: 400;
-                font-size: rem(18px);
+                font-size: rem(16px);
                 line-height: 1.2;
                 color: #666666;
-                margin-bottom: rem(22px);
-                padding: 0 8%;
+                margin-bottom: rem(10px);
+                padding: 0;
+                @include _Mobile{
+                    font-size: rem(18px);
+                    margin-bottom: rem(22px);
+                    padding: 0 8%;
+                }
                 @include _Tablet{
                     margin-bottom: rem(24px);
                     padding: 0 13%;
@@ -226,15 +247,21 @@
                 }
                 &-title{
                     font-weight: 400;
-                    font-size: rem(18px);
+                    font-size: rem(16px);
                     line-height: 1.2;
                     color: #666666;
+                    @include _Mobile{
+                        font-size: rem(18px);
+                    }
                 }
                 &-info{
                     font-weight: 700;
-                    font-size: rem(18px);
+                    font-size: rem(16px);
                     line-height: 1.2;
                     color: $black;
+                    @include _Mobile{
+                        font-size: rem(18px);
+                    }
                 }
             }
             &__footer{
@@ -246,10 +273,14 @@
                 }
                 &-price{
                     font-weight: 300;
-                    font-size: rem(40px);
+                    font-size: rem(30px);
                     line-height: 1;
                     color: $black;
-                    margin-right: rem(8px);
+                    margin-right: rem(10px);
+                    @include _Mobile{
+                        font-size: rem(40px);
+                        margin-right: rem(8px);
+                    }
                     @include _Tablet{
                         font-size: rem(60px);
                         margin-right: rem(28px);

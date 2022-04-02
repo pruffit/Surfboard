@@ -57,7 +57,7 @@
         align-items: center;
         justify-content: center;
         position: absolute;
-        bottom: rem(40px);
+        bottom: rem(80px);
         left: 0;
         right: 0;
         font-weight: 700;
@@ -68,6 +68,9 @@
         transform-origin: center;
         transform: rotate(-180deg); 
         z-index: 4;
+        @include _Mobile{
+            bottom: rem(40px);
+        }
     }
     &__content{
         backdrop-filter: blur(10px);

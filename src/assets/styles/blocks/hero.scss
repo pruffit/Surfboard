@@ -1,16 +1,26 @@
 .hero{
-    background: url(../images/hero/bg.png) 85% center no-repeat;
-    background-size: auto 100%;
+    background: url(../images/hero/bg.png);
+    background-repeat: no-repeat;
+    background-position: 85% 60px;
+    background-size: cover;
     background-color: #335487;
     height: 100%;
-    padding: rem(24px) 0 rem(70px);
+    padding: 0;
+    @include _Mobile{
+        background: url(../images/hero/bg.png);
+        background-position: 85% center;
+        background-size: auto 100%;
+    }
     @include _Tablet{
-        background: url(../images/hero/bg.png) right center no-repeat;
+        padding: rem(24px) 0 rem(70px);
+        background: url(../images/hero/bg.png);
+        background-position: right center;
         background-size: cover;
     }
     @include _Desktop{
         margin-top: 0;
-        background: url(../images/hero/bg.png) center center no-repeat;
+        background: url(../images/hero/bg.png);
+        background-position: center center;
         background-size: cover;
     }
     &__title{
@@ -34,13 +44,14 @@
     &__main-title{
         text-transform: uppercase;
         font-weight: 700;
-        font-size: rem(40px);
+        font-size: rem(28px);
         line-height: 1.2;
         color: $white;
         margin-bottom: rem(12px);
-        word-break: break-all;
+        @include _Mobile{
+            font-size: rem(40px);
+        }
         @include _Tablet{
-            word-break: keep-all;
             font-size: rem(48px);
             margin-bottom: rem(9px);
         }
@@ -53,7 +64,10 @@
         font-size: rem(18px);
         line-height: 1.2;
         color: $white;
-        margin-bottom: rem(44px);
+        margin-bottom: rem(30px);
+        @include _Mobile{
+            margin-bottom: rem(44px);  
+        }
         @include _Tablet{
             font-size: rem(21px);
         }

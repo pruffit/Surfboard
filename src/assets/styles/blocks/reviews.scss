@@ -1,8 +1,12 @@
 .reviews{
     &__display{
         background-color: #F8FAF9;
-        padding: rem(56px) rem(25px) rem(30px);
-        margin-bottom: rem(30px);
+        padding: rem(20px);
+        margin-bottom: rem(20px);
+        @include _Mobile{
+            padding: rem(56px) rem(25px) rem(30px);
+            margin-bottom: rem(30px);
+        }
         @include _Tablet{
             padding: rem(56px) rem(24px) rem(46px);
             margin-bottom: rem(32px);
@@ -24,8 +28,11 @@
     }
     &__list{
         position: relative;
-        min-height: rem(280px);
+        min-height: rem(220px);
         width: 100%;
+        @include _Mobile{
+            min-height: rem(280px);
+        }
     }
     &__item{
         position: absolute;
@@ -43,9 +50,14 @@
         }
     }
     &__avatar{
-        width: rem(130px);
-        height: rem(132px);
-        margin-bottom: rem(32px);
+        width: rem(100px);
+        height: rem(100px);
+        margin-bottom: rem(20px);
+        @include _Mobile{
+            width: rem(130px);
+            height: rem(132px);
+            margin-bottom: rem(32px);
+        }
         @include _Desktop{
             margin-bottom: 0;
             width: rem(254px);
@@ -66,10 +78,14 @@
     }
     &__title{
         font-weight: 700;
-        font-size: rem(27px);
+        font-size: rem(20px);
         line-height: 1.2;
         color: $font-color;
-        margin-bottom: rem(16px);
+        margin-bottom: rem(10px);
+        @include _Mobile{
+            font-size: rem(27px);
+            margin-bottom: rem(16px);
+        }
         @include _Desktop{
             margin-bottom: rem(14px);
         }
@@ -77,20 +93,29 @@
     &__text{
         p{
             font-weight: 400;
-            font-size: rem(18px);
+            font-size: rem(16px);
             line-height: 1.2;
-            color: $gray;   
+            color: $gray; 
+            @include _Mobile{
+                font-size: rem(18px);
+            }  
         }
-        margin-bottom: rem(16px);
+        margin-bottom: rem(10px);
+        @include _Mobile{
+            margin-bottom: rem(16px); 
+        }
         @include _Desktop{
             margin-bottom: rem(25px);
         }
     }   
     &__author{
         font-weight: 500;
-        font-size: rem(18px);
+        font-size: rem(16px);
         line-height: 1.5;
         color: $font-color;
+        @include _Mobile{
+            font-size: rem(18px);
+        }
     }
     &__switcher{
         display: flex;

@@ -1,6 +1,9 @@
 .footer{
-    min-height: rem(150px);
+    min-height: rem(200px);
     background-color: $white;
+    @include _Mobile{
+        min-height: rem(150px);
+    }
     @include _Tablet{
         min-height: rem(100px);
     }
@@ -16,6 +19,10 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        padding-bottom: rem(60px);
+        @include _Mobile{
+            padding-bottom: 0;
+        }
         @include _Tablet{
             flex-direction: row;
             justify-content: space-between;

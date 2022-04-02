@@ -51,34 +51,45 @@
         }
         &__image{
             display: inline-block;
-            min-width: rem(128px);
-            height: rem(128px);
+            min-width: rem(90px);
+            height: rem(90px);
             position: relative;
             background-color:  #F2F5F4;
             border-radius: 50%;
             overflow: hidden;
             margin-bottom: 0;
             margin-right: rem(12px);
+            @include _Mobile{
+                min-width: rem(128px);
+                height: rem(128px);
+            }
             @include _Tablet{
                 margin-right: 0;
                 margin-bottom: rem(20px); 
             }
             .image{
-                width: rem(68px);
-                height: rem(68px);
+                width: rem(48px);
+                height: rem(48px);
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 fill: $black;
+                @include _Mobile{
+                    width: rem(68px);
+                    height: rem(68px);
+                }
             }
         }
         &__title{
             font-weight: 700;
-            font-size: rem(27px);
+            font-size: rem(20px);
             line-height: 1.2;
             color: $font-color;
             margin-bottom: rem(10px);
+            @include _Mobile{
+                font-size: rem(27px);
+            }
             @include _Tablet{
                 margin-bottom: rem(7px); 
             }
@@ -88,9 +99,12 @@
         }
         &__desk{
             font-weight: 300;
-            font-size: rem(18px);
+            font-size: rem(16px);
             line-height: 1.2;
             color: $gray;
+            @include _Mobile{
+                font-size: rem(18px);
+            }
         }
     }
 }
