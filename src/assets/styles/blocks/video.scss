@@ -1,0 +1,96 @@
+.video{
+    width: rem(662px);
+    height: rem(392px);
+    &__controls{
+        padding: 0 rem(16px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #404040;
+        height: rem(34px);
+        &-play{
+            border: none;
+            background-color: transparent;
+            width: rem(10px);
+            height: rem(16px);
+            background: url(../images/video/controls/play.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            cursor: pointer;
+        }
+        &-bar{
+            position: relative;
+            height: rem(6px);
+            width: rem(446px);
+            &-item{
+                position: absolute;
+                top: 50%;
+                left: 0%;
+                transform: translateY(-50%);
+                border: none;
+                background-color: #626262;
+                height: rem(6px);
+                width: rem(446px);
+                &::-webkit-progress-value{
+                    background-color: $yellow;
+                }
+            }
+            &-dot{
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                border-radius: 50%;
+                width: rem(15px);
+                height: rem(15px);
+                background-color: $yellow;
+            }
+        }
+        &-volume{
+            display: flex;
+            align-items: center;
+            &-mute{
+                width: rem(12px);
+                height: rem(16px);
+                border: none;
+                background-color: transparent;
+                background: url(../images/video/controls/volume.svg);
+                margin-right: rem(24px);
+                cursor: pointer;
+            }
+            &-bar{
+                position: relative;
+                height: rem(4px);
+                width: rem(56px);
+                &-item{
+                    position: absolute;
+                    top: 50%;
+                    left: 0%;
+                    transform: translateY(-50%);
+                    border: none;
+                    background-color: #626262;
+                    height: rem(4px);
+                    width: rem(56px);
+                    &::-webkit-progress-value{
+                        background-color: $yellow;
+                    }
+                }
+                &-dot{
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    border-radius: 50%;
+                    width: rem(15px);
+                    height: rem(15px);
+                    background-color: $yellow;
+                }
+            }
+        }
+    }
+}

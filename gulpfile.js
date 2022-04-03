@@ -87,6 +87,10 @@ task('images', () => {
   return src('src/assets/images/**/*').pipe(dest(`${DIST_PATH}/assets/images/`));
 });
 
+task('video', () => {
+  return src('src/assets/video/*').pipe(dest(`${DIST_PATH}/assets/video/`));
+});
+
 task('server', () => {
  browserSync.init({
      server: {
@@ -107,7 +111,7 @@ task('watch', () => {
 task('default',
  series(
    'clean',
-   parallel('copy:html', 'styles', 'scripts', 'images'),//icons
+   parallel('copy:html', 'styles', 'scripts', 'images', 'video'),//icons
    parallel('watch', 'server')
  )
 );
@@ -115,5 +119,5 @@ task('default',
 task('build',
  series(
    'clean',
-   parallel('copy:html', 'styles', 'scripts', 'images'))//icons
+   parallel('copy:html', 'styles', 'scripts', 'images', 'video'))//icons
 );
