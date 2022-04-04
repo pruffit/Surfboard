@@ -86,6 +86,7 @@
             position: relative;
             height: rem(4px);
             width: rem(160px);
+            cursor: pointer;
             @include _Mobile{
                 width: rem(264px);
             }
@@ -173,6 +174,7 @@
                 position: relative;
                 height: rem(4px);
                 width: rem(36px);
+                cursor: pointer;
                 @include _Tablet{
                     width: rem(54px);
                 }

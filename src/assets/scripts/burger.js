@@ -1,14 +1,28 @@
-const burgerOpen = document.querySelector("#burgerToggle");
-const burgerClose = document.querySelector("#burgerClose");
-const burgerMenu = document.querySelector(".burger-menu");
-const body = document.body;
-burgerOpen.addEventListener("click", (e) => {
+const burgerOpen = $("#burgerToggle");
+const burgerClose = $("#burgerClose");
+const burgerMenu = $(".burger-menu");
+const body = $("body");
+const openBurgerMenu = function () {
+    burgerMenu.css({
+        display: "flex" 
+    });
+    body.addClass("no-scroll");
+}
+const hideBurgerMenu = function () {
+    burgerMenu.css({
+        display: "none" 
+    });
+    body.removeClass("no-scroll");
+}
+burgerOpen.on("click", (e) => {
     e.preventDefault();
-    burgerMenu.style.display = "flex";
-    body.classList.add("no-scroll");
+    openBurgerMenu();
 });
-burgerClose.addEventListener("click", (e) => {
+burgerClose.on("click", (e) => {
     e.preventDefault();
-    burgerMenu.style.display = "none";
-    body.classList.remove("no-scroll");
+    hideBurgerMenu();
+});
+burgerMenu.find('.menu__link').on("click", (e) => {
+    e.preventDefault();
+    hideBurgerMenu();
 });

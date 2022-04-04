@@ -132,7 +132,7 @@
                     background-color: $blue;
                     border-radius: 4px;
                     margin-bottom: rem(52px);
-                    cursor: default;
+                    cursor: pointer;
                     @include _Desktop{
                         display: flex;
                     }

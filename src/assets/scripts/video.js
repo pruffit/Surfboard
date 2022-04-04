@@ -54,7 +54,6 @@ const videoDuration = function () {
 }
 videoBar.addEventListener("click", (e) => {
     e.preventDefault();
-    // const clickedPosition = e.clientX - 349;
     const clickedPosition = e.layerX;
     const newPosition = Math.round((clickedPosition/ videoBar.offsetWidth) * 100);
     const newPositionPercent = Math.round((video.duration / 100) * newPosition);
@@ -74,7 +73,6 @@ const videoVolume = function () {
 }
 controlBar.addEventListener("click", (e) => {
     e.preventDefault();
-    // const clickedPosition = e.clientX - 860;
     const clickedPosition = e.layerX;
     const clickedPositionPercent = clickedPosition/controlBar.offsetWidth;
     video.volume = clickedPositionPercent;
